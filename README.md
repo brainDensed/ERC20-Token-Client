@@ -1,13 +1,13 @@
-# BonerToken Frontend (React + Vite)
+# FoolishToken Frontend (React + Vite)
 
-This is the frontend dApp for the BonerToken ERC20 project. It allows users to connect their wallet, transfer tokens, burn tokens, and (if owner) mint, pause, or unpause the contract—all via a modern React interface.
+This is the frontend dApp for the FoolishToken ERC20 project. It allows users to connect their wallet, transfer tokens, burn tokens, and (if owner) mint, pause, or unpause the contract—all via a modern React interface.
 
 ## Features
 
 - Connect wallet (MetaMask)
 - View connected account
-- Transfer BONER tokens to others
-- Burn your BONER tokens
+- Transfer FOOLISH tokens to others
+- Burn your FOOLISH tokens
 - Owner-only actions: mint, pause, unpause
 - Clean, responsive UI
 

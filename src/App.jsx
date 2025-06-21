@@ -9,11 +9,11 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Boner Token Exchange</h1>
+      <h1>Foolish Token Exchange</h1>
       {account ? (
         <>
           <div className="account-info">
-            <span className="connected-dot" /> Connected: <b>{account}</b>
+            <span className="connected-dot" /> Connected:&nbsp;<b>{account}</b>
           </div>
           <div className="actions-grid">
             <TokenActions />
