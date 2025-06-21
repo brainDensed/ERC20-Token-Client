@@ -51,7 +51,7 @@ public/            # Static assets
 
 ## Backend / Smart Contract
 
-The smart contract code and deployment instructions are available at: [boner-token-server](https://github.com/brainDensed/ERC20-Token)
+The smart contract code and deployment instructions are available at: [ERC20-token-server](https://github.com/brainDensed/ERC20-Token)
 
 ## Notes
 
