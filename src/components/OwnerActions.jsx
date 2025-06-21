@@ -41,21 +41,35 @@ export default function OwnerActions() {
   };
 
   return (
-    <div>
-      <h3>Owner Actions</h3>
+    <div className="card">
+      <h2>Owner Actions</h2>
       <input
+        className="input"
+        id="to"
         placeholder="Recipient"
         value={to}
         onChange={(e) => setTo(e.target.value)}
       />
       <input
+        className="input"
+        id="amount"
         placeholder="Amount"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
       />
-      <button onClick={handleMint}>Mint</button>
-      <button onClick={handlePause}>Pause</button>
-      <button onClick={handleUnpause}>Unpause</button>
+      <div className="btn-group">
+        <button className="action-btn" onClick={handleMint}>
+          Mint
+        </button>
+      </div>
+      <div className="btn-group">
+        <button className="action-btn" onClick={handlePause}>
+          Pause
+        </button>
+        <button className="action-btn" onClick={handleUnpause}>
+          Unpause
+        </button>
+      </div>
     </div>
   );
 }
