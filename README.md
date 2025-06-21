@@ -1,12 +1,59 @@
-# React + Vite
+# BonerToken Frontend (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend dApp for the BonerToken ERC20 project. It allows users to connect their wallet, transfer tokens, burn tokens, and (if owner) mint, pause, or unpause the contract—all via a modern React interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Connect wallet (MetaMask)
+- View connected account
+- Transfer BONER tokens to others
+- Burn your BONER tokens
+- Owner-only actions: mint, pause, unpause
+- Clean, responsive UI
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure Contract
+
+- Ensure the deployed contract address and ABI are set in `src/utils/ethereum.js`.
+- Copy the ABI from your backend's `artifacts/contracts/BonerToken.sol/BonerToken.json` if needed.
+
+### 3. Run the App
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
+
+## Project Structure
+
+```
+src/
+  components/      # React components (TokenActions, OwnerActions, etc.)
+  context/         # Wallet context for global state
+  utils/           # Ethereum/web3 helpers
+  App.jsx          # Main app component
+  App.css          # Styles
+public/            # Static assets
+```
+
+## Usage
+
+1. Connect your MetaMask wallet.
+2. Use the interface to transfer, burn, or (if owner) mint/pause/unpause tokens.
+
+## Notes
+
+- Make sure you are connected to the same network as the deployed contract (e.g., Sepolia).
+- The contract address is public and safe to include in the frontend.
+
+## License
+
+This project is licensed under the MIT
