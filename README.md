@@ -49,6 +49,10 @@ public/            # Static assets
 1. Connect your MetaMask wallet.
 2. Use the interface to transfer, burn, or (if owner) mint/pause/unpause tokens.
 
+## Backend / Smart Contract
+
+The smart contract code and deployment instructions are available at: [boner-token-server](https://github.com/brainDensed/ERC20-Token)
+
 ## Notes
 
 - Make sure you are connected to the same network as the deployed contract (e.g., Sepolia).
