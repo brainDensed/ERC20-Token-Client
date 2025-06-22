@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { WalletContext } from "./WalletContext";
 import { transferTokens, burnTokens, getSigner } from "../utils/ethereum";
 import { ethers } from "ethers";
+import { parseEvmError } from "../utils/parseEvmError";
 
 export default function TokenActions() {
   const { account } = useContext(WalletContext);
@@ -18,7 +19,7 @@ export default function TokenActions() {
       setTo("");
       setAmount("");
     } catch (e) {
-      alert(e.message);
+      alert(parseEvmError(e));
     }
     setLoading(false);
   };
