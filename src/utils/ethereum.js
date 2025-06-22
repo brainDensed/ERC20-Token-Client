@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-const CONTRACT_ADDRESS = "0x8470920355a6d42e68c9e59164FC0EA38CDF5d29";
+const CONTRACT_ADDRESS = "0x69E1dE758f22fE4e3F1063e1C941e8443Be28225";
 const CONTRACT_ABI = [
   {
     inputs: [
@@ -515,45 +515,45 @@ const CONTRACT_ABI = [
 ];
 
 export async function getProvider() {
-    if (!window.ethereum) throw new Error ("No wallet found");
-    return new ethers.BrowserProvider(window.ethereum);
+  if (!window.ethereum) throw new Error("No wallet found");
+  return new ethers.BrowserProvider(window.ethereum);
 }
 
 export async function getSigner() {
-    const provider = await getProvider();
-    return provider.getSigner();
+  const provider = await getProvider();
+  return provider.getSigner();
 }
 
 export function getContract(signerOrProvider) {
-    return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signerOrProvider);
+  return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signerOrProvider);
 }
 
 export async function getBalance(account, provider) {
-    const contract = getContract(provider);
-    return await contract.balanceOf(account);
+  const contract = getContract(provider);
+  return await contract.balanceOf(account);
 }
 
 export async function transferTokens(to, amount, signer) {
-    const contract = getContract(signer);
-    return await contract.transfer(to, amount);
+  const contract = getContract(signer);
+  return await contract.transfer(to, amount);
 }
 
 export async function burnTokens(amount, signer) {
-    const contract = getContract(signer);
-    return await contract.burn(amount);
+  const contract = getContract(signer);
+  return await contract.burn(amount);
 }
 
 export async function mintTokens(to, amount, signer) {
-    const contract = getContract(signer);
-    return await contract.mint(to, amount);
+  const contract = getContract(signer);
+  return await contract.mint(to, amount);
 }
 
 export async function pauseContract(signer) {
-    const contract = getContract(signer);
-    return await contract.pause();
+  const contract = getContract(signer);
+  return await contract.pause();
 }
 
 export async function unpauseContract(signer) {
-    const contract = getContract(signer);
-    return await contract.unpause();
+  const contract = getContract(signer);
+  return await contract.unpause();
 }
