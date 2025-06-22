@@ -1,6 +1,6 @@
 # FoolishToken Frontend (React + Vite)
 
-This is the frontend dApp for the FoolishToken ERC20 project. It allows users to connect their wallet, transfer tokens, burn tokens, and (if owner) mint, pause, or unpause the contract—all via a modern React interface.
+This is the frontend dApp for the FoolishToken ERC20 project. It allows users to connect their wallet, transfer tokens, burn tokens, and (if owner) mint, pause, or unpause the contract all via a modern React interface.
 
 ## Features
 
