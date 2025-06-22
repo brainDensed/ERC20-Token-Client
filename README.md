@@ -22,7 +22,7 @@ npm install
 ### 2. Configure Contract
 
 - Ensure the deployed contract address and ABI are set in `src/utils/ethereum.js`.
-- Copy the ABI from your backend's `artifacts/contracts/BonerToken.sol/BonerToken.json` if needed.
+- Copy the ABI from your backend's `artifacts/contracts/FoolishToken.sol/FoolishToken.json` if needed.
 
 ### 3. Run the App
 
